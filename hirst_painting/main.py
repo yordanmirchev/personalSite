@@ -19,12 +19,13 @@ def extract_rgb_from_image(image_name, number_of_colors):
 #print(rgb_colors)
 #print(rgb_colors)
 
-rgb_colors =[(249, 248, 247), (251, 248, 250), (241, 249, 245), (242, 245, 250), (239, 221, 113), (18, 111, 193), (223, 60, 95), (235, 150, 76), (116, 147, 208), (143, 88, 50), (212, 127, 164), (34, 194, 117), (139, 183, 18), (189, 18, 39), (108, 105, 194), (232, 55, 45), (244, 147, 183), (113, 191, 149), (191, 46, 66), (19, 187, 206), (45, 52, 105), (136, 221, 240), (146, 229, 169), (202, 210, 7), (22, 151, 116), (233, 174, 159), (31, 43, 76), (112, 42, 40), (181, 178, 220), (80, 34, 37)]
+## Set up variables
+tim = Turtle()
+screen = Screen()
+turtle.colormode(255)
+colors =[(249, 248, 247), (251, 248, 250), (241, 249, 245), (242, 245, 250), (239, 221, 113), (18, 111, 193), (223, 60, 95), (235, 150, 76), (116, 147, 208), (143, 88, 50), (212, 127, 164), (34, 194, 117), (139, 183, 18), (189, 18, 39), (108, 105, 194), (232, 55, 45), (244, 147, 183), (113, 191, 149), (191, 46, 66), (19, 187, 206), (45, 52, 105), (136, 221, 240), (146, 229, 169), (202, 210, 7), (22, 151, 116), (233, 174, 159), (31, 43, 76), (112, 42, 40), (181, 178, 220), (80, 34, 37)]
 
-def draw_a_painting(colors):
-    tim = Turtle()
-    screen = Screen()
-    turtle.colormode(255)
+def position_turtle():
     tim.hideturtle()
     tim.speed(10)
     tim.penup()
@@ -33,15 +34,22 @@ def draw_a_painting(colors):
     tim.pendown()
 
 
+def draw_row():
+    for j in range(10):
+        tim.dot(20, choice(colors))
+        tim.penup()
+        tim.forward(50)
+        tim.pendown()
+
+
+def draw_a_painting_vertical():
+    position_turtle()
+
     for i in range(10):
         tim_x = tim.xcor()
         tim_y = tim.ycor()
         tim.setheading(90)
-        for j in range(10):
-            tim.dot(20, choice(colors))
-            tim.penup()
-            tim.forward(50)
-            tim.pendown()
+        draw_row()
         tim.penup()
         tim.setx(tim_x)
         tim.sety(tim_y)
@@ -52,7 +60,23 @@ def draw_a_painting(colors):
         tim.forward(50)
         tim.pendown()
 
+    screen.exitonclick()
+
+def draw_a_painting_horizontal():
+    position_turtle()
+    for i in range(10):
+        tim_x = tim.xcor()
+        tim_y = tim.ycor()
+        draw_row()
+        tim.penup()
+        tim.setx(tim_x)
+        tim.sety(tim_y)
+        tim.setheading(90)
+        tim.forward(50)
+        tim.setheading(0)
+        tim.pendown()
 
     screen.exitonclick()
 
-draw_a_painting(rgb_colors)
+#draw_a_painting_vertical()
+draw_a_painting_horizontal()
