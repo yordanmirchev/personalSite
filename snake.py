@@ -1,7 +1,7 @@
 import time
 from turtle import Turtle
 
-from constants import INITIAL_POSITIONS, STEP_SIZE, LEFT, RIGHT, DOWN, UP, DISPLAY_DELAY, SPEED_UP_FACTOR
+from constants import INITIAL_POSITIONS, STEP_SIZE, LEFT, RIGHT, DOWN, UP, SPEED_UP_FACTOR
 
 
 class Snake:
