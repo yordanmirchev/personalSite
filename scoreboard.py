@@ -1,4 +1,5 @@
 from turtle import Turtle
+from constants import FONT
 
 
 class Scoreboard(Turtle):

@@ -7,3 +7,9 @@ TURTLE_STEP = 20
 
 DISPLAY_DELAY = 0.1
 BUFFER = 15
+
+COLORS = ["red", "orange", "yellow", "green", "blue", "purple"]
+STARTING_MOVE_DISTANCE = 5
+MOVE_ICREMENT = 5
+
+FONT = ("Courier", 24, "normal")
