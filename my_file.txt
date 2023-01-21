@@ -1,3 +1,4 @@
-Test text.
+Text replaced
 Second line.
-Third line.
+Third line replaced.
+text appended.
