@@ -1,5 +1,5 @@
 from turtle import Turtle
-
+from data_manager import read_high_score_as_int, write_high_score
 from constants import SCREEN_HEIGHT, ALIGN, FONT, BUFFER_FONT
 
 
@@ -11,7 +11,7 @@ class ScoreBoard(Turtle):
         self.hideturtle()
         self.penup()
         self.score = 0
-        self.high_score = 0
+        self.high_score = read_high_score_as_int()
         self.write_score()
 
     def update_score(self):
@@ -31,5 +31,6 @@ class ScoreBoard(Turtle):
     def reset(self):
         if self.score > self.high_score:
             self.high_score = self.score
+            write_high_score(self.high_score)
         self.score = 0
         self.update_score()
