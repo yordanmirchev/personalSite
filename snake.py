@@ -53,3 +53,11 @@ class Snake:
     def speed_up(self):
         global DISPLAY_DELAY
         DISPLAY_DELAY *= SPEED_UP_FACTOR
+
+    def reset(self):
+        for snake in self.snake_parts:
+            snake.hideturtle()
+
+        self.snake_parts.clear()
+        self.build_initial_body()
+        self.head = self.snake_parts[0]

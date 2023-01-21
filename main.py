@@ -47,8 +47,8 @@ def play():
             score_board.update_score()
 
         if wall_is_reached() or body_is_collided():
-            game_is_on = False
-            score_board.write_end_game()
+            score_board.reset()
+            snake.reset()
 
 
 play()
