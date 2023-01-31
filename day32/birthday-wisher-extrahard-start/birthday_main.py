@@ -33,9 +33,9 @@ def send_mail(recepient, subject, message):
         )
 
 
-def is_birthday_today(day, month, year):
+def is_birthday_today(day, month):
     now = dt.datetime.now()
-    return now.day == day and now.month == month and now.year == year
+    return now.day == day and now.month == month
 
 
 def get_templates_multiple():
@@ -77,5 +77,5 @@ for birthday in birthdays:
     b_name = birthday.get("name")
     b_email = birthday.get("email")
 
-    if is_birthday_today(year=b_year, month=b_month, day=b_day):
+    if is_birthday_today(month=b_month, day=b_day):
         send_mail(b_email,subject=f"Happy Birthday {b_name}!!!", message=get_letter_for(f"{b_name}"))
