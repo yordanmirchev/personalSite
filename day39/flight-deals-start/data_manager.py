@@ -2,7 +2,7 @@ import requests
 
 SHEETY_AUTH = "Bearer 21eo2dkdfmwfjfjewf"
 #SHEETY_ENDPOINT = "https://api.sheety.co/662d62744bcba66841a8f30d58efedf2/flightDeals/prices"
-#new with
+#new with second gmail account
 SHEETY_ENDPOINT = "https://api.sheety.co/5b98705668ee970add6ac603505d4c46/flightDeals/prices"
 
 sheety_header = {
