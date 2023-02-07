@@ -20,7 +20,7 @@ WEIGHT = 82.0
 HEIGHT = 178.00
 AGE = 37
 
-url = "https://trackapi.nutritionix.com/v2/natural/exercise"
+trackapi_url = "https://trackapi.nutritionix.com/v2/natural/exercise"
 
 headers = {
     "x-app-id": APP_ID,
@@ -39,7 +39,7 @@ parameters = {
     "age": AGE
 }
 
-request = requests.post(url=url, json=parameters, headers=headers)
+request = requests.post(url=trackapi_url, json=parameters, headers=headers)
 print(request.text)
 result = request.json()['exercises']
 
