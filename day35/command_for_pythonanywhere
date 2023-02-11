@@ -1,1 +1,0 @@
-export OMW_API_KEY=5a99b9c852d3782788fd305728355c33; export auth_token=536ae0b5a51ba35e415538a7378c2f81; python3 wheather_main.py
