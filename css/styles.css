@@ -1,0 +1,49 @@
+/*div {
+    background-color:#F6F7C1;
+	margin: 0px;
+}
+
+*/
+
+body {
+	margin: 0;
+	text-align:center;
+	font-family: Montserrat, sans-serif;
+}
+
+h1 {
+	/* If we dont have full length in order to center the text we can use auto margin on left and right
+	width:5%;
+	margin: 0 auto 0 auto;
+	*/
+
+	margin-top:0;
+
+}
+
+
+.top-cloud {
+	position:absolute;
+	right:300px;
+	top:50px;
+}
+
+.bottom-cloud {
+	position:absolute;
+	bottom:300px;
+	left:300px;
+
+}
+
+.top-container{
+    background-color: #F6F7C1;
+    position:relative;
+    padding-top:100px;
+}
+
+.middle-container{
+}
+
+.bottom-container{
+}
+
