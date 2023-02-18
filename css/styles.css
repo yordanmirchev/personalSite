@@ -16,9 +16,26 @@ h1 {
 	width:5%;
 	margin: 0 auto 0 auto;
 	*/
+	/*Sizes : 16px = 100% = 1em*/
+	margin:50px auto 0 auto;
+	font-size:5.62rem;
+	color:#66BFBF;
+	line-height:2;
 
-	margin-top:0;
+}
 
+h2 {
+ font-size:2.5rem;
+ color:#66BFBF;
+ font-weight: normal;
+}
+
+h3 {
+ color:#11999E;
+}
+
+a {
+ color:#11999E;
 }
 
 
@@ -40,6 +57,26 @@ h1 {
     position:relative;
     padding-top:100px;
 }
+
+.skill-row{
+ text-align: left;
+ width:50%;
+ margin: 100px auto;
+ line-height:3;
+}
+
+.book-image{
+	width:25%;
+	float: left;
+    margin-right: 30px;
+}
+
+.jigsaw-image{
+	width:25%;
+	float: right;
+    margin-left: 30px;
+}
+
 
 .middle-container{
 }
